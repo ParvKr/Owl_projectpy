@@ -1,10 +1,11 @@
+import { SignedOut, SignIn, SignInButton } from '@clerk/clerk-react'
+import { SignedIn, UserButton } from '@clerk/nextjs'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const navIcons = [
   { src: '/assets/icons/search.svg', alt: 'search' },
   { src: '/assets/icons/black-heart.svg', alt: 'heart' },
-  { src: '/assets/icons/user.svg', alt: 'user' },
 ]
 
 const Navbar = () => {
@@ -35,7 +36,13 @@ const Navbar = () => {
               className="object-contain"
             />
           ))}
+
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
         </div>
+
+        
       </nav>
     </header>
   )
