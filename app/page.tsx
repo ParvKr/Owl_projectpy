@@ -3,6 +3,7 @@ import Searchbar from "@/components/Searchbar"
 import Image from "next/image"
 import { getAllProducts } from "@/lib/actions"
 import ProductCard from "@/components/ProductCard"
+import Products from "@/components/ProductsBack"
 
 const Home = async () => {
   const allProducts = await getAllProducts();
@@ -36,6 +37,7 @@ const Home = async () => {
 
           <HeroCarousel />
         </div>
+        <Products />
       </section>
 
       <section className="trending-section">

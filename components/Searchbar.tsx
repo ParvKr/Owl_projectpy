@@ -51,6 +51,7 @@ const Searchbar = () => {
       onSubmit={handleSubmit}
     >
       <input 
+        id='search'
         type="text"
         value={searchPrompt}
         onChange={(e) => setSearchPrompt(e.target.value)}
